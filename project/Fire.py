@@ -5,11 +5,9 @@ class Fire:
     def __init__(self, position,lastDirectionIsLeft):
         self.appearance = 'rectangle'
         self.speed = 10
-        self.damage = 10
         self.position = np.array([position[0]-3, position[1]-3, position[0]+3, position[1]+3])
         self.direction = {'left' : False, 'right' : False}
         self.state = None
-        self.outline = "#0000FF"
         if lastDirectionIsLeft:
             self.direction['left'] = True
         else:
@@ -41,17 +39,22 @@ class Fire:
                 self.position[2] += 5
 
             
-    def collision_check(self, enemys):
-        for enemy in enemys:
-            collision = self.overlap(self.position, enemy.position)
+    def hit(self, monsters):
+        for monster in monsters:
+            collision = self.overlap(self.position, monster.position)
             
             if collision:
-                enemy.state = 'die'
+                monster.state = 'dead'
                 self.state = 'hit'
+                return True
+    def hitBoss(self, boss):
+        if self.overlap(self.position,boss.position):
+            boss.hp-=1
+            return True
 
     def overlap(self, ego_position, other_position):
         '''
-        두개의 사각형(bullet position, enemy position)이 겹치는지 확인하는 함수
+        두개의 사각형(bullet position, monster position)이 겹치는지 확인하는 함수
         좌표 표현 : [x1, y1, x2, y2]
         
         return :
