@@ -4,7 +4,6 @@ import random
 import cv2 as cv
 import numpy as np
 from colorsys import hsv_to_rgb
-from Character import Character
 from  Mario import Mario 
 from Joystick import Joystick
 from Background import Background
@@ -145,7 +144,6 @@ def main():
         my_draw.rectangle((0, 0, joystick.width, joystick.height), fill = (124, 255, 255, 25))
         croppedBackground = background.crop(tuple([x,0,240+x,240]))
         my_draw.bitmap((0,0),croppedBackground,fill=(242,152,134))
-        my_draw.ellipse(tuple(mario.position), fill = (0, 0, 0))
         arrRed=mario.arrRed
         arrYellow=mario.arrYellow
         arrBrown=mario.arrBrown

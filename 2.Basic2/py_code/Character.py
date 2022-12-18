@@ -36,3 +36,4 @@ class Character:
                 
         #center update
         self.center = np.array([(self.position[0] + self.position[2]) / 2, (self.position[1] + self.position[3]) / 2]) 
+

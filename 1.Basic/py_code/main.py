@@ -19,6 +19,17 @@ def main():
         command = None
         if not joystick.button_U.value:  # up pressed
             command = 'up_pressed'
+            for i in range(10):
+                my_circle.move(command)
+
+                my_draw.rectangle((0, 0, joystick.width, joystick.height), fill = (255, 255, 255, 100))
+                my_draw.ellipse(tuple(my_circle.position), outline = my_circle.outline, fill = (0, 0, 0))
+
+                joystick.disp.image(my_image)
+                time.sleep(0.1)
+                if(i == 5):
+                    command = 'down_pressed'
+            continue
 
         elif not joystick.button_D.value:  # down pressed
             command = 'down_pressed'

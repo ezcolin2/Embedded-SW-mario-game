@@ -3,7 +3,6 @@ import numpy as np
 
 class Fire:
     def __init__(self, position,lastDirectionIsLeft):
-        self.appearance = 'rectangle'
         self.speed = 10
         self.position = np.array([position[0]-3, position[1]-3, position[0]+3, position[1]+3])
         self.direction = {'left' : False, 'right' : False}

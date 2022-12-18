@@ -1,0 +1,69 @@
+[I 11:30:48.644 NotebookApp] The port 8888 is already in use, trying another port.
+[I 11:30:48.646 NotebookApp] Serving notebooks from local directory: /home/kau-esw/esw/TA-ESW
+[I 11:30:48.646 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 11:30:48.646 NotebookApp] http://raspberrypi:8889/
+[I 11:30:48.646 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[I 11:31:18.019 NotebookApp] Serving notebooks from local directory: /home/kau-esw/esw/TA-ESW
+[I 11:31:18.019 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 11:31:18.020 NotebookApp] http://raspberrypi:8888/
+[I 11:31:18.020 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 11:31:47.363 NotebookApp] Notebook 1.Basic/basic.ipynb is not trusted
+[I 11:31:48.741 NotebookApp] Kernel started: 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05, name: python3
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: 3eef03ae-5e60-4648-82b8-7e1c26be85b6
+[I 11:33:50.952 NotebookApp] Saving file at /1.Basic/basic.ipynb
+[I 11:35:50.939 NotebookApp] Saving file at /1.Basic/basic.ipynb
+[I 11:39:50.930 NotebookApp] Saving file at /1.Basic/basic.ipynb
+[I 11:41:50.920 NotebookApp] Saving file at /1.Basic/basic.ipynb
+[I 11:42:52.867 NotebookApp] Starting buffering for 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05:99a1df5879dc4e998756e444f2f8a336
+[I 11:42:56.969 NotebookApp] Kernel restarted: 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05
+[I 11:42:57.053 NotebookApp] Restoring connection for 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05:99a1df5879dc4e998756e444f2f8a336
+[I 11:43:00.256 NotebookApp] Replaying 31 buffered messages
+[I 11:43:48.680 NotebookApp] Saving file at /1.Basic/basic.ipynb
+[I 11:45:35.027 NotebookApp] Starting buffering for 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05:99a1df5879dc4e998756e444f2f8a336
+[I 11:45:45.995 NotebookApp] Copying 1.Basic/basic.ipynb to /1.Basic
+[I 11:45:51.665 NotebookApp] Kernel started: 094ee021-88af-40c5-9f2b-357b354eb025, name: python3
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: 2aafbbe8-de2b-4ddd-a51a-005492464c3c
+[I 11:47:53.878 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:48:27.660 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:49:53.887 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:51:53.883 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:52:54.646 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:52:58.192 NotebookApp] Kernel restarted: 094ee021-88af-40c5-9f2b-357b354eb025
+[I 11:52:58.298 NotebookApp] Restoring connection for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:53:01.379 NotebookApp] Replaying 12 buffered messages
+[I 11:53:52.364 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:55:33.751 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:55:38.735 NotebookApp] Kernel restarted: 094ee021-88af-40c5-9f2b-357b354eb025
+[I 11:55:38.800 NotebookApp] Restoring connection for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:55:38.802 NotebookApp] Replaying 1 buffered messages
+[I 11:55:51.586 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:57:09.537 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:57:14.043 NotebookApp] Kernel restarted: 094ee021-88af-40c5-9f2b-357b354eb025
+[I 11:57:14.097 NotebookApp] Restoring connection for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:57:17.474 NotebookApp] Replaying 18 buffered messages
+[I 11:57:51.596 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 11:58:54.806 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:58:58.963 NotebookApp] Kernel restarted: 094ee021-88af-40c5-9f2b-357b354eb025
+[I 11:58:59.006 NotebookApp] Restoring connection for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 11:59:02.351 NotebookApp] Replaying 24 buffered messages
+[I 11:59:51.573 NotebookApp] Saving file at /1.Basic/basic-Copy1.ipynb
+[I 12:03:31.554 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:ba42a390b4f145338b0a8cf05276d82a
+[I 12:03:41.943 NotebookApp] Starting buffering for 094ee021-88af-40c5-9f2b-357b354eb025:81d01a35214f4f63beff4c7a9e9c9396
+[C 12:04:35.268 NotebookApp] received signal 15, stopping
+[I 12:04:35.282 NotebookApp] Shutting down 2 kernels
+[I 12:04:35.285 NotebookApp] Kernel shutdown: 39d5a6bb-04bb-4bbc-b292-4315ed5f9f05
+[I 12:04:35.523 NotebookApp] Kernel shutdown: 094ee021-88af-40c5-9f2b-357b354eb025
+[I 12:04:35.594 NotebookApp] Shutting down 0 terminals
+[I 16:50:13.220 NotebookApp] Serving notebooks from local directory: /home/kau-esw/esw/TA-ESW
+[I 16:50:13.224 NotebookApp] Jupyter Notebook 6.5.2 is running at:
+[I 16:50:13.225 NotebookApp] http://raspberrypi:8888/
+[I 16:50:13.225 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[W 16:50:20.509 NotebookApp] Notebook 2.Basic2/basic2.ipynb is not trusted
+[I 16:50:21.637 NotebookApp] Kernel started: b6902540-e457-42da-9a44-8b22a616c5df, name: python3
+[IPKernelApp] ERROR | No such comm target registered: jupyter.widget.control
+[IPKernelApp] WARNING | No such comm: 9799efdc-12ff-47ff-9c8a-006ea6c81eb9
+[I 16:52:21.990 NotebookApp] Saving file at /2.Basic2/basic2.ipynb
+[I 16:58:24.157 NotebookApp] Saving file at /2.Basic2/basic2.ipynb
+[I 17:25:29.171 NotebookApp] Starting buffering for b6902540-e457-42da-9a44-8b22a616c5df:52c220accf804a3495ef6c835d9920a2

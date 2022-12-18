@@ -20,7 +20,6 @@ class Mario:
         self.center = np.array([(self.position[0] + self.position[2]) / 2, (self.position[1] + self.position[3]) / 2])
         self.firstHeight = self.center[1]
         self.jumpHeight = 50
-        self.isOn=False # 현재 땅을 밟고 있으면 True 
         self.isOnGroundNum = 0 # 현재 밟고 있는 땅의 번호 
     def isOnGround(self, ground): #땅을 밟고 섬 
         return self.position[3]==ground.position[1] and ground.position[0]<self.center[0]<ground.position[2]
@@ -100,23 +99,24 @@ class Mario:
 
     def move(self, command = None, grounds = None):
 
-        if self.noHit!=0:
+        if self.noHit!=0:#공격 당하고나면 잠시동안 무적
             self.noHit-=1
     
         if command['left_pressed']:
             self.right=False
         elif command['right_pressed']:
             self.right=True
-        if self.isJumping:
+        if self.isJumping: #위로 올라갈 때 (점프 중)
 
             for i in grounds:
                 if self.isUnderGround(i): #머리가 부딪힌다면 
                     self.isDown=True
                     self.isJumping=False
-                    res=[i.blockState,i.center]
-                    i.blockState="normal"
+                    res=[i.blockState,i.center] #블록 상태(아이템, 코인, 일반)와 center값을 리턴함 
+                    #main에서 코인 블록 center값과 동일한 코인을 찾아서 그 코인을 보이게 하기 위함
+                    i.blockState="normal" #아이템과 코인 블록의 경우 머리로 터치하면 일반 블록으로 바꿈
                     return res
-            if  self.jumpCount<15:
+            if  self.jumpCount<15: #점프는 총 15번 위로 움직임 
                 
                 self.jumpCount+=1
                 self.position[1] -= 5
@@ -125,24 +125,24 @@ class Mario:
                 self.isDown=True
                 self.isJumping=False
 
-        elif self.isDown:
+        elif self.isDown: #아래로 내려갈 때 (점프 중)
             self.temp=0
             for i in grounds:
-                if self.isOnGround(i): # 원래 추가 조건이 jumpCount!=0 이고 break가 있었음 
+                if self.isOnGround(i): #내려오는 와중에 땅이 존재한다면 즉시 멈춰야 한다.
+                #공중 땅에 착지할 때는 내려오는 중이고 jumpCount가 양수이기 때문에 이를 초기화시켜줘야 한다.
+                    
                     self.isJumping = False
                     self.isDown = False
                     self.jumpCount=0
-                    self.isOn=True
-                    self.isOnGroundNum=self.temp
+                    self.isOnGroundNum=self.temp #isOnGroundNum은 현재 올라와있는 땅의 인덱스를 의미한다.
                     
                 self.temp+=1
-            print(self.isOnGroundNum,self.isOn,self.jumpCount)
-            #for i in grounds:
-            if self.isOn and self.jumpCount==0 and self.notGround(grounds[self.isOnGroundNum]):
-                #땅에 한 번 올라간 상태에 땅에 닿아있는 상태일 때
+            
+            if self.jumpCount==0 and self.notGround(grounds[self.isOnGroundNum]):
+                #jumpCount가 0이라는 뜻은 위로 올라간만큼 내려왔다는 뜻이다.
+                #공중 땅에서 점프를 했는데 내려올 때 원래 있던 땅에 착지한 게 아니라면 조금 더 내려와야 한다.
                 self.jumpCount+=(240-grounds[self.isOnGroundNum].position[3])/5
-                #한 번에 5씩 움직이기 때문에 ground의 y좌표와 캐릭터의 y좌표의 차이를 5로 나누어주면 된다. 
-                self.isOn=False
+                #한 번에 5씩 움직이기 때문에 ground의 y좌표와 캐릭터의 y좌표의 차이를 5로 나누어주면 된다.
                 self.isDown=True
                 self.isJumping=False
                 #break
@@ -150,18 +150,17 @@ class Mario:
                 self.jumpCount-=1
                 self.position[1] += 5
                 self.position[3] += 5
-                #여기서 땅에 닿으면 초기화시키는 코드 추가 
             else:
                 self.isJumping=False
                 self.isDown=False
-            #self.isOnGroundNum=0
         
-
-
 
         elif command['up_pressed']:
             self.isJumping=True
         if command['right_pressed']:
+            #오른쪽으로 가고 있는데 땅이 없다면 isDown을 True로 만들어 내려갈 때(점프 중)상태를 만들어준다.
+            #물론 jumpCount가 0이기 때문에 아래로 내려가지는 않는다.
+            #이는 isOnGroundNum, 즉 현재 올라와 있는 땅의 번호를 갱신하기 위함이다.
             if self.notGround(grounds[self.isOnGroundNum]):
                 self.isDown=True
         elif command['left_pressed']:
@@ -172,8 +171,6 @@ class Mario:
         #center update
         self.center = np.array([(self.position[0] + self.position[2]) / 2, (self.position[1] + self.position[3]) / 2])
 
-    def jumpStart(self):
-        self.isJumping=True 
 
     
         

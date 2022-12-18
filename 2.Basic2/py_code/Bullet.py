@@ -6,14 +6,9 @@ class Bullet:
         self.speed = 10
         self.damage = 10
         self.position = np.array([position[0]-3, position[1]-3, position[0]+3, position[1]+3])
-        self.direction = {'up' : False, 'down' : False, 'left' : False, 'right' : False}
+        self.direction = {'left' : False, 'right' : False}
         self.state = None
-        self.outline = "#0000FF"
         if command['up_pressed']:
-            self.direction['up'] = True
-        if command['down_pressed']:
-            self.direction['down'] = True
-        if command['right_pressed']:
             self.direction['right'] = True
         if command['left_pressed']:
             self.direction['left'] = True
@@ -21,13 +16,6 @@ class Bullet:
         
 
     def move(self):
-        if self.direction['up']:
-            self.position[1] -= self.speed
-            self.position[3] -= self.speed
-
-        if self.direction['down']:
-            self.position[1] += self.speed
-            self.position[3] += self.speed
 
         if self.direction['left']:
             self.position[0] -= self.speed
