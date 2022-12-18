@@ -1,8 +1,0 @@
-[I 12:03:27.335 NotebookApp] The port 8888 is already in use, trying another port.
-[I 12:03:27.336 NotebookApp] Serving notebooks from local directory: /home/kau-esw/esw/TA-ESW/0.Test
-[I 12:03:27.336 NotebookApp] Jupyter Notebook 6.5.2 is running at:
-[I 12:03:27.336 NotebookApp] http://raspberrypi:8889/
-[I 12:03:27.337 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
-[C 12:04:35.272 NotebookApp] received signal 15, stopping
-[I 12:04:35.282 NotebookApp] Shutting down 0 kernels
-[I 12:04:35.284 NotebookApp] Shutting down 0 terminals
